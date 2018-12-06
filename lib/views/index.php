@@ -4,23 +4,24 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hero - Free Bulma template</title>
+        <title><?php echo $page['PageTitle']; ?></title>
         <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <!-- Bulma Version 0.7.2-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/hero.css">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
     </head>
     <body>
-        <section class="hero is-info is-medium is-bold">
+        <section class="hero is-primary is-medium is-bold">
             <div class="hero-head">
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="../">
-                                <h1 style="font-size:23px;"><?php echo $page['PageTitle']; ?></h1>
+                                <h1 style="font-size:29px;font-family: 'Catamaran', sans-serif;font-weight:900px;"><strong><?php echo $page['PageTitle']; ?></strong></h1>
                             </a>
                             <span class="navbar-burger burger" data-target="navbarMenu">
                                 <span></span>
@@ -39,7 +40,7 @@
                                         <li><a href="">Help</a></li>
                                     </ul>
                                     <span class="navbar-item">
-                                        <a class="button is-white is-outlined" href="https://github.com/dansup/bulma-templates/blob/master/templates/hero.html">
+                                        <a class="button is-white is-outlined" href="signup/">
                                             <span title="Create a new account for free">Sign Up</span>
                                         </a>
                                     </span>
@@ -52,7 +53,7 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h1 class="title">
-                    Welcome on <?php echo $page['PageTitle']; ?>
+                    <strong>Welcome on <?php echo $page['PageTitle']; ?></strong>
                     </h1>
                     <h2 class="subtitle">
                     <?php echo $page['PageDescription']; ?>
@@ -61,8 +62,8 @@
             </div>
         </section>
         <div class="box cta">
-            <p class="has-text-centered">
-                <span class="tag is-primary">New</span>&nbsp; text
+            <p class="has-text-centered" style="font-size:19px;">
+                <span class="tag is-info">NEWS</span>&nbsp;&nbsp; We are currently under development
             </p>
         </div>
         
