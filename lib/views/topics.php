@@ -103,14 +103,10 @@
                                 <div class="media-content">
                                     <div class="content" style="margin-left:2%;">
                                         <a href="/topic?id=<?php echo $topic['TopicID'];?>">
-                                            <strong><?php echo $topic['TopicTitle'];?></strong>
+                                            <strong style="font-size:24px;"><?php echo $topic['TopicTitle'];?></strong>
                                         <br>
                                     </a>
-                                        <p style=" overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;width:800px;">
-                                        <?php echo $topic['TopicContent'];?>
-                                        </p>
+         
                                     </div>
                                 </div>
                                 <div class="box" style="margin-left:5%;width:auto;">
