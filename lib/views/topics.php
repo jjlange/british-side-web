@@ -34,7 +34,7 @@
                                 <div class="tabs is-right">
                                     <ul>
                                         <li><a href="/">Home</a></li>
-                                        <li class="is-active"><a href="">Community</a></li>
+                                        <li class="is-active"><a href="/community">Community</a></li>
                                         <li><a href="">Members</a></li>
                                         <li><a href="">Team</a></li>
                                         <li><a href="">Help</a></li>
@@ -76,8 +76,20 @@
             </p>
         </div>
         <div class="container">
-            <h1 style="font-size:35px;">Forums</h1>
-            <?php foreach($categories as $category) {?>
+            <h1 style="font-size:35px;">Topics of “<?php echo $category['CategoryTitle'];?>”</h1>
+            <p><?php echo $category['CategoryDescription'];?></p>
+            <br /><br />
+            <nav class="breadcrumb is-left" aria-label="breadcrumbs">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/community">Community</a></li>
+                <li class="is-active"><a href="/topics?id=<?php echo $category['CategoryID'];?>" aria-current="page"><?php echo $category['CategoryTitle'];?></a></li>
+              </ul>
+            <div class="buttons has-addons is-right">
+            <a href="/create_topic?id=<?php echo $category['CategoryID'];?>" class="button is-<?php echo $page['PageTheme'];?> is-medium right"><i class="fas fa-plus"></i>&nbsp; New topic</a>
+            </div>
+            </nav>
+            <?php foreach($topics as $topic) {?>
             <div class="topic">
                 <div class="columns">
                     <div class="column">
@@ -90,22 +102,22 @@
                                 </div>
                                 <div class="media-content">
                                     <div class="content" style="margin-left:2%;">
-                                        <a href="/topics?id=<?php echo $category['CategoryID'];?>">
-                                            <strong><?php echo $category['CategoryTitle'];?></strong>
+                                        <a href="/topic?id=<?php echo $topic['TopicID'];?>">
+                                            <strong><?php echo $topic['TopicTitle'];?></strong>
                                         <br>
                                     </a>
                                         <p style=" overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;width:800px;">
-                                        <?php echo $category['CategoryDescription'];?>
+                                        <?php echo $topic['TopicContent'];?>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="box" style="margin-left:5%;width:auto;">
                                     <div class="media-content">
                                       <div class="content">
-                                          <span class="tag is-<?php echo $page['PageTheme'];?> is-medium"><?php echo Category::get_categories_topics_count($category['CategoryID']);?> Topic (s)</span>
-                                          <span class="tag is-<?php echo $page['PageTheme'];?> is-medium">0 Users</span>
+                                          <span class="tag is-<?php echo $page['PageTheme'];?> is-medium"><?php echo Topic::get_topic_creator($topic['CreatorID']);?></span>
+                                          <span class="tag is-<?php echo $page['PageTheme'];?> is-medium">0 Likes</span>
                                           <span class="tag is-<?php echo $page['PageTheme'];?> is-medium">0 Moderators</span>
                                       </div>
                                     </div>

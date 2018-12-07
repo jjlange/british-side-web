@@ -76,47 +76,34 @@
             </p>
         </div>
         <div class="container">
-            <h1 style="font-size:35px;">Forums</h1>
-            <?php foreach($categories as $category) {?>
-            <div class="topic">
-                <div class="columns">
-                    <div class="column">
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <figure class="image">
-                                        <i class="fas fa-pen-square" style="font-size:45px;"></i>
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <div class="content" style="margin-left:2%;">
-                                        <a href="/topics?id=<?php echo $category['CategoryID'];?>">
-                                            <strong><?php echo $category['CategoryTitle'];?></strong>
-                                        <br>
-                                    </a>
-                                        <p style=" overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;width:800px;">
-                                        <?php echo $category['CategoryDescription'];?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="box" style="margin-left:5%;width:auto;">
-                                    <div class="media-content">
-                                      <div class="content">
-                                          <span class="tag is-<?php echo $page['PageTheme'];?> is-medium"><?php echo Category::get_categories_topics_count($category['CategoryID']);?> Topic (s)</span>
-                                          <span class="tag is-<?php echo $page['PageTheme'];?> is-medium">0 Users</span>
-                                          <span class="tag is-<?php echo $page['PageTheme'];?> is-medium">0 Moderators</span>
-                                      </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                <br />
+            <h1 style="font-size:35px;">Reply on “<?php echo $topic['TopicTitle'];?>”</h1>
+            <br /><br />
+            <div class="box">
+            <form method="post">    
+                <article class="media">
+                    <div class="media-content">
+<div class="field">
+  <label class="label">Message / Content</label>
+  <div class="control">
+    <textarea class="textarea" name="Content" max="250" placeholder="e.g. I love playing soccer, anyone else as well?"></textarea>
+  </div>
+</div>
+<div class="field is-grouped">
+  <div class="control">
+    <input type="submit" name="submit" class="button is-<?php echo $page['PageTheme'];?>" value="Reply" />
+  </div>
+  <div class="control">
+    <a href="/topic?id=<?php echo $topic['TopicID'];?>" class="button is-danger">Cancel</a>
+  </div>
+</div>         
+                    </div>        
+                </article>
+            </form>
+            </div>
+            </div>
+            <br />
                 </div>
             </div> 
-            <?php } ?>  
         </div>    
     </div>
 </div>

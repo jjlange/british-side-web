@@ -33,6 +33,8 @@ load_model('Database');
 load_model('Settings');
 load_model('Account');
 load_model('Category');
+load_model('Topic');
+load_model('Reply');
 
 /**
  *
