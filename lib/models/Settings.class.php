@@ -14,7 +14,7 @@
 function getPageInfo() {
 	global $db;
 	$dbh = $db->get_conn();
-	$stmt = $dbh->prepare('SELECT PageTitle, PageDescription, PageStatus FROM Settings');
+	$stmt = $dbh->prepare('SELECT PageTitle, PageDescription, PageStatus, PageTheme, PageDomain FROM Settings');
 	$stmt->execute();
 	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 	return $data;

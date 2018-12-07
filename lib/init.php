@@ -7,6 +7,7 @@
  * @author Justin Lange
  **/
 
+session_start();
 
 function page_exists($x) {
     // Check if class file exists in our page controllers folder
@@ -30,6 +31,8 @@ function load_model($model_name) {
 load_controller('ViewController');
 load_model('Database');
 load_model('Settings');
+load_model('Account');
+load_model('Category');
 
 /**
  *

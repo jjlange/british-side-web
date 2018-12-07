@@ -8,3 +8,7 @@
  **/
 
 $page = getPageInfo();
+
+if(Account::isLoggedIn()) {
+ 	$Account = Account::getAccountInfo($_SESSION['AccountID']);
+ }
