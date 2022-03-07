@@ -1,6 +1,11 @@
 # British Side Web
-This project contains the development version of British Side's web interface.
+This is the website of an old Java Minecraft project.
+
+This project contains an early development version of British Side's web interface.
 To run this project, you need to do these following steps:
+
+## Update 7/03/2022
+Code made publicly available. Only for educational purposes, no support is given. Includes basic account functionality.
 
 ## Set up a server
 - Set up a MySQL server with the correct database file
@@ -10,7 +15,6 @@ To run this project, you need to do these following steps:
 
 ## Start web server without Apache
 
-PHP contains a web server as well, you don't need to install Apache.
-Just run (php -S localhost:80) in your command line and start the built in server,
-don't forget to switch into the right folder. (www)
+PHP contains a web server for development purposes as well.
+Run  ```php -S localhost:80```  in your command line to start the web server.
 
